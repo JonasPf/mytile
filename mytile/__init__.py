@@ -23,23 +23,6 @@ import os
 from docopt import docopt
 from sarge import capture_stdout, run
 
-
-"""
-Development Information
-=======================
-
-TODO:
-    - The order of the windows is messed up. Should sort them based on x/y top left to bottom right
-    - Reaction time can be a bit slow after pressing a button. This is mainly because Python starts takes a while to start. Possible solutions would be:
-        - Reduce imports and use optimize
-        - Compile using nuitka
-        - Make it a server running in the background and communicate via named pipes or tcp
-    - Remember floating window position and make it possible to revert to them
-
-Links:
-    - http://blog.spiralofhope.com/1042/wmctrl-user-documentation.html
-"""
-
 PATH = os.path.expanduser("~") + '/.mytile.json'
 
 Desktop = collections.namedtuple('Desktop', ['id', 'active', 'dimensions'])
