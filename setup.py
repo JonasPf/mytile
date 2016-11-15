@@ -6,6 +6,7 @@ setup(name='MyTile',
       description='Tiles windows',
       author='Jonas Pfannschmidt',
       author_email='jonas.pfannschmidt@gmail.com',
+      packages=['mytile'],
       install_requires=[
           'docopt',
           'sarge'
