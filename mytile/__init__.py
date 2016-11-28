@@ -123,7 +123,7 @@ def find_active_window(windows):
         An instance of Window representing the currently active window or None if it can't found.
     """
     stdout = capture_stdout('xdotool getactivewindow').stdout.text
-    windows_id = '0x0' + hex(int(stdout))[2:]
+    windows_id = '0x' + hex(int(stdout))[2:].rjust(8, '0')
 
     for w in windows:
         if w.id == windows_id:
