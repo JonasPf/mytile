@@ -22,6 +22,8 @@ import json
 import os
 from docopt import docopt
 from sarge import capture_stdout, run
+from Xlib import X, display, Xutil
+from Xlib.ext import xinerama
 
 PATH = os.path.expanduser("~") + '/.mytile.json'
 
